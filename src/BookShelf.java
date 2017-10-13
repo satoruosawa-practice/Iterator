@@ -1,14 +1,13 @@
+import java.util.Vector;
 public class BookShelf implements Aggregate {
-	private Book[] books;
+	private Vector<Book> books = new Vector<Book>();
 	private int last = 0;
-	public BookShelf(int maxsize) {
-		this.books = new Book[maxsize];
-	}
+	public BookShelf() {}
 	public Book getBookAt (int index) {
-		return books[index];
+		return books.get(index);
 	}
 	public void appendBook(Book book) {
-		this.books[last] = book;
+		this.books.add(book);
 		last++;
 	}
 	public int getLength() {
