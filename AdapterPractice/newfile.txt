@@ -1,0 +1,5 @@
+#written by FileProperties
+#Fri Oct 13 21:51:12 JST 2017
+day=20
+year=2000
+month=11
