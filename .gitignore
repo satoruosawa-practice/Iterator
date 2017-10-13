@@ -29,3 +29,5 @@ config.make
 # Linux, etc
 Makefile
 
+/.metadata/
+/.recommenders/
