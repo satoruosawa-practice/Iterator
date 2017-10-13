@@ -12,5 +12,9 @@ public class main {
 			Book book = (Book)it.next();
 			System.out.println("" + book.getName());
 		}
+		while (it.hasPrevious()) {
+			Book book = (Book)it.previous();
+			System.out.println("" + book.getName());
+		}
 	}
 }

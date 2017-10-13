@@ -17,4 +17,16 @@ public class BookShelfIterator implements Iterator {
 		index++;
 		return book;
 	}
+	public Object previous() {
+		index--;
+		Book book = bookShelf.getBookAt(index);
+		return book;
+	}
+	public boolean hasPrevious() {
+		if (index > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
