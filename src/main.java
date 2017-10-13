@@ -8,12 +8,16 @@ public class main {
 		bookShelf.appendBook(new Book("Cinderella"));
 		bookShelf.appendBook(new Book("Daddy-Long-Legs"));
 		Iterator it = bookShelf.iterator();
+		Book book = (Book)it.current();
+		System.out.println("" + book.getName());
 		while (it.hasNext()) {
-			Book book = (Book)it.next();
+			book = (Book)it.next();
 			System.out.println("" + book.getName());
 		}
+		book = (Book)it.jump(1);
+		System.out.println("" + book.getName());
 		while (it.hasPrevious()) {
-			Book book = (Book)it.previous();
+			book = (Book)it.previous();
 			System.out.println("" + book.getName());
 		}
 	}
