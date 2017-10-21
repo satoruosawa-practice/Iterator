@@ -1,20 +1,19 @@
 
 public class Triple {
-	private static Triple triple1 = new Triple();
-	private static Triple triple2 = new Triple();
-	private static Triple triple3 = new Triple();
-	private Triple() {}
+	private static Triple[] triple = new Triple[] {
+		new Triple(0),
+		new Triple(1),
+		new Triple(2),
+	};
+	private int id;
+	private Triple(int id) {
+		System.out.println("The instance " + id  + " is created.");
+		this.id = id;
+	}
 	public static Triple getInstance(int id) {
-		switch(id) {
-		case 1:
-			return triple1;
-		case 2:
-			return triple2;
-		case 3:
-			return triple3;
-		default:
-			System.out.println("you can't.");
-			return null;
-		}
+		return triple[id];
+	}
+	public String toString() {
+		return "[Triple id=" + id + "]";
 	}
 }
